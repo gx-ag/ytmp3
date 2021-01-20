@@ -1,0 +1,8 @@
+node_modules/
+ytmp3.zip
+.terraform/
+build/
+dist/
+downloads/
+ffmpeg
+.env
