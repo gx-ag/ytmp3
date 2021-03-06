@@ -67,6 +67,7 @@ export async function download(id: string, out: string, progress: (type: 'downlo
         }
       }).on('error', reject).on('end', resolve).save(out);
     });
+    progress('converting', 1);
     let tags = splitTitle(info.videoDetails.title);
     await new Promise<void>((resolve, reject) => NodeID3.write(tags, out, (err: any) => {
       if (err) reject(err);

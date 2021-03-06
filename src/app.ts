@@ -91,7 +91,7 @@ export async function downloadMp3(id: string): Promise<{ status: 'complete' | 'e
     } catch (err) {
     }
     const result = { ...data, status: 'complete' as 'complete' };
-    writeJsonObject(key, result);
+    await writeJsonObject(key, result);
     return result;
   }
 }
